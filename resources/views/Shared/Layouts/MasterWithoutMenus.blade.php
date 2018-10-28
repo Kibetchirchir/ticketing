@@ -3,20 +3,17 @@
 
         <title>NW -Tickets</title>
 
-        @include('Shared/Layouts/ViewJavascript')
+    @include('Shared/Layouts/ViewJavascript')
+
+    @include('Shared.Partials.GlobalMeta')
 
     <!--JS-->
-    {!! HTML::script('vendor/jquery/dist/jquery.
-     @include('Shared.Partials.GlobalMeta')
-
-     <!--JS-->
-min.js') !!}
-        <!--/JS-->
+    {!! HTML::script('vendor/jquery/dist/jquery.min.js') !!}
+    <!--/JS-->
 
         <!--Style-->
-       {!!HTML::style('assets/stylesheet/application.css')!!}
-        <!--/Style-->
-
+    {!!HTML::style('assets/stylesheet/application.css')!!}
+    <!--/Style-->
         @yield('head')
 
         <style>
