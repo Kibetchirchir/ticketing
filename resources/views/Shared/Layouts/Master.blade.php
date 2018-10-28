@@ -38,7 +38,7 @@
 
     <div class="navbar-header">
         <a class="navbar-brand" href="javascript:void(0);">
-            <img style="width: 150px;" class="logo" alt="N&W" src="{{asset('assets/images/logo.png')}}"/>
+            <img style="width: 80px;" class="logo" alt="N&W" src="{{asset('assets/images/logo.png')}}"/>
         </a>
     </div>
 
