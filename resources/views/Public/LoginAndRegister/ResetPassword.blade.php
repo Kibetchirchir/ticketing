@@ -12,7 +12,7 @@ Reset Password
 
             <div class="panel-body">
                 <div class="logo">
-                   {!!HTML::image('assets/images/logo-dark.png')!!}
+                   {!!HTML::image('assets/images/logo.png')!!}
                 </div>
                 <h2>@lang("User.reset_password")</h2>
                 @if (Session::has('status'))

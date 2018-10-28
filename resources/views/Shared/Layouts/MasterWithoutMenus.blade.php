@@ -1,14 +1,16 @@
 <html>
     <head>
 
-        <title>@yield('title')</title>
+        <title>NW -Tickets</title>
 
         @include('Shared/Layouts/ViewJavascript')
 
-        @include('Shared.Partials.GlobalMeta')
+    <!--JS-->
+    {!! HTML::script('vendor/jquery/dist/jquery.
+     @include('Shared.Partials.GlobalMeta')
 
-        <!--JS-->
-       {!! HTML::script('vendor/jquery/dist/jquery.min.js') !!}
+     <!--JS-->
+min.js') !!}
         <!--/JS-->
 
         <!--Style-->
