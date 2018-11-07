@@ -46,8 +46,23 @@ class ExtractController extends Controller
     /**
      * @return mixed
      */
-    public function download(){
+    public function send(Request $request)
+    {
+        if ($request->hasFile('import_file')) {
+            Excel::load($request->file('import_file')->getRealPath(), function ($reader) {
+                foreach ($reader->toArray() as $key => $row) {
+                    $data['Firstname'] = $row['Firstname'];
+                    $data['Email'] = $row['Email'];
 
-        return  Excel::download(new test, 'emails.xlsx');
+                    if (!empty($data)) {
+                        $name = $data['Firstname'];
+                        Mail::to($data['Email'])->send(new SendMailable($name));
+
+                        return 'Email was sent';
+
+                    }
+
+                }
+            });
+        }}
     }
-}
