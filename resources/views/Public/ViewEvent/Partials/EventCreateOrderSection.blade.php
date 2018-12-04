@@ -174,9 +174,14 @@
 
 
                 @if(@$payment_gateway->is_on_site)
-                        <iframe src="https://pg.nehemiahandwilliams.com/apps/mfollopg/IFRAMEv2/iframev2.php?" width="100%" height="600px"  scrolling="yes" frameBorder="0">
+                        <iframe src="https://pg.nehemiahandwilliams.com/apps/mfollopg/IFRAMEv2/iframev2.php?" height="100%" scrolling="no" frameBorder="0">
                             <p>Browser unable to load iFrame</p>
                         </iframe>
+                        <script>
+                            function resizeIframe(obj) {
+                                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+                            }
+                        </script>
                 @endif
 
                 @endif
